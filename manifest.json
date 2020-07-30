@@ -1,0 +1,22 @@
+{
+    "name": "straight2bankruptcy",
+    "version": "0.0.0.1",
+    "description": "too much hent—... reddit",
+    "manifest_version": 2,
+    "permissions": [
+        "webRequest",
+        "tabs",
+        "<all_urls>"
+      ],
+      "content_scripts": [
+        {
+          "matches": [
+            "http://support.cancer.ca/site/*", "https://support.cancer.ca/site/*"
+          ],
+          "js": ["src/js/content.js"]
+        }
+      ],
+      "background": {
+        "scripts": ["src/js/jquery.js", "src/js/background.js"]
+      }
+  }
